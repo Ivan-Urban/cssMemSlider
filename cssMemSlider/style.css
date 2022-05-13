@@ -38,3 +38,27 @@ body {
 .slide1 {
   background-image: url('./assets/images/slide1.jpg');
 }
+
+.slide2 {
+  background-image: url('./assets/images/slide2.jpg');
+}
+
+.slide3 {
+  background-image: url('./assets/images/slide3.jpg');
+}
+
+.slide4 {
+  background-image: url('./assets/images/slide4.jpg');
+}
+
+.slide5 {
+  background-image: url('./assets/images/slide5.jpg');
+}
+
+.slide6 {
+  background-image: url('./assets/images/slide6.jpg');
+}
+
+.slide7 {
+  background-image: url('./assets/images/slide7.jpg');
+}
