@@ -10,3 +10,31 @@ body {
   background-size: cover;
   background-position: 0 -150px;
 }
+
+.wrapper {
+  position: relative;
+  margin: 50px auto 0;
+  padding: 30px;
+  width: 860px;
+  height: 600px;
+  background: linear-gradient(#c9a787b1, #1f1a15b1);
+  /* background: #c9a787cd; */
+  border-radius: 10px;
+}
+
+.slider {
+  width: 800px;
+  height: 450px;
+}
+
+.slide {
+  height: inherit;
+	position: absolute;
+	width: inherit;
+  background-size: cover;
+  border-radius: 5px
+}
+
+.slide1 {
+  background-image: url('./assets/images/slide1.jpg');
+}
