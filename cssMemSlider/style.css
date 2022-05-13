@@ -28,6 +28,7 @@ body {
 
 .slider {
   width: 800px;
+  margin-bottom: 40px;
   height: 450px;
   order: -2;
 }
@@ -83,8 +84,16 @@ body {
   margin-left: auto;
 }
 
+.input {
+  margin-top: 10px;
+}
+
 .slide-text {
   display: none;
+  height: 40px;
+  text-align: start;
+  color: beige;
+  font-size: 30px;
   opacity: 0;
   order: -1;
 }
