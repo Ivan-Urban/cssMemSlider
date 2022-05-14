@@ -83,7 +83,8 @@ body {
 }
 
 .input {
-  appearance: none;
+  display: none;
+  /* appearance: none;
   margin-top: 10px;
   margin-left: 1%;
   cursor: pointer;
@@ -92,22 +93,22 @@ body {
   height: 1vw;
   border: 2px solid #b0865f;
   transition: ease-in-out 0.3s;
-  /* order: -3; */
+  order: -3; */
 }
 
-.input:hover {
+/* .input:hover {
   border: 2px solid #ffd9b5
-}
+} */
 
-.input:checked {
+/* .input:checked {
   background: #b0865f;
-}
+} */
 
-.input:checked:hover {
+/* .input:checked:hover {
   background: #ffd9b5;
-}
+} */
 
-.input:after {
+/* .input:after {
   display: block;
   position: relative;
   content: '';
@@ -115,8 +116,8 @@ body {
   height: 30px;
   top: -9px;
   left: -9px;
-  /* border: 1px solid green */
-}
+  border: 1px solid green
+} */
 
 .slide-text {
   display: none;
@@ -137,4 +138,52 @@ body {
 #slide7:checked ~ .text7 {
   display: block;
 	opacity: 1;
+}
+
+.label-wrapper {
+  display: flex;
+  margin-left: auto;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2vw;
+  width: 2vw;
+  margin-top: 3px;
+  cursor: pointer;
+}
+
+.label:hover > .point {
+  border: 2px solid #ffd9b5
+}
+
+.point {
+  display: block;
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50%;
+  border: 2px solid #b0865f;
+  transition: ease-in-out 0.3s;
+}
+
+#slide1:checked ~ .label-wrapper > .label1 > .point,
+#slide2:checked ~ .label-wrapper > .label2 > .point,
+#slide3:checked ~ .label-wrapper > .label3 > .point,
+#slide4:checked ~ .label-wrapper > .label4 > .point,
+#slide5:checked ~ .label-wrapper > .label5 > .point,
+#slide6:checked ~ .label-wrapper > .label6 > .point,
+#slide7:checked ~ .label-wrapper > .label7 > .point {
+  background: #b0865f;
+}
+
+#slide1:checked:hover ~ .label-wrapper > .label1 > .point,
+#slide2:checked:hover ~ .label-wrapper > .label2 > .point,
+#slide3:checked:hover ~ .label-wrapper > .label3 > .point,
+#slide4:checked:hover ~ .label-wrapper > .label4 > .point,
+#slide5:checked:hover ~ .label-wrapper > .label5 > .point,
+#slide6:checked:hover ~ .label-wrapper > .label6 > .point,
+#slide7:checked:hover ~ .label-wrapper > .label7 > .point {
+  background: #ffd9b5;
 }
