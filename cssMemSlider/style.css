@@ -85,7 +85,38 @@ body {
 }
 
 .input {
+  appearance: none;
   margin-top: 10px;
+  margin-left: 14px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #b0865f;
+  transition: ease-in-out 0.3s;
+}
+
+.input:hover {
+  border: 2px solid #ffd9b5
+}
+
+.input:checked {
+  background: #b0865f;
+}
+
+.input:checked:hover {
+  background: #ffd9b5;
+}
+
+.input:after {
+  display: block;
+  position: relative;
+  content: '';
+  width: 30px;
+  height: 30px;
+  top: -9px;
+  left: -9px;
+  /* border: 1px solid green */
 }
 
 .slide-text {
