@@ -6,37 +6,34 @@
 
 body {
   background-image: url('./assets/images/fon.jpg');
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-size: cover;
   background-position: 0 -150px;
 }
 
 .wrapper {
   display: flex;
-  /* flex-direction: column; */
-  /* justify-content: space-between; */
   flex-wrap: wrap;
-  position: relative;
   margin: 50px auto 0;
   padding: 30px;
-  width: 860px;
-  height: 600px;
+  width: 56.60874%;
+  /* height: 600px; */
+  height: 40.14vw;
   background: linear-gradient(#c9a787b1, #1f1a15b1);
-  /* background: #c9a787cd; */
   border-radius: 10px;
 }
 
 .slider {
-  width: 800px;
-  margin-bottom: 40px;
-  height: 450px;
+  width: 100%;
+  margin-bottom: 1%;
+  height: 90%;
   order: -2;
 }
 
 .slide {
+  display: none;
   height: inherit;
-	position: absolute;
-	width: inherit;
+	width: 100%;
   background-size: cover;
   border-radius: 5px;
   opacity: 0;
@@ -77,6 +74,7 @@ body {
 #slide5:checked ~ .slider > .slide5,
 #slide6:checked ~ .slider > .slide6,
 #slide7:checked ~ .slider > .slide7 {
+  display: block;
 	opacity: 1;
 }
 
@@ -87,13 +85,14 @@ body {
 .input {
   appearance: none;
   margin-top: 10px;
-  margin-left: 14px;
+  margin-left: 1%;
   cursor: pointer;
   border-radius: 50%;
-  width: 16px;
-  height: 16px;
+  width: 1vw;
+  height: 1vw;
   border: 2px solid #b0865f;
   transition: ease-in-out 0.3s;
+  /* order: -3; */
 }
 
 .input:hover {
@@ -121,10 +120,10 @@ body {
 
 .slide-text {
   display: none;
-  height: 40px;
+  height: 7%;
   text-align: start;
   color: beige;
-  font-size: 30px;
+  font-size: 1.5em;
   opacity: 0;
   order: -1;
 }
