@@ -7,13 +7,17 @@
 body {
   background-image: url('./assets/images/fon.jpg');
   background-size: cover;
-  background-position: 0 -150px;
+  /* background-position: 0 -150px; */
+  background-position: center center;
+  height: 561px;
+  overflow: hidden;
+  font-size: 1.5em;
 }
 
 .wrapper {
   display: flex;
   flex-wrap: wrap;
-  margin: 50px auto 0;
+  margin: calc(100vh/2 - 20vw) auto 0;
   padding: 30px;
   width: 56.60874%;
   height: 40.14vw;
@@ -24,6 +28,7 @@ body {
 .slider {
   align-items: center;
   width: 100%;
+  /* margin: 0 auto 1%; */
   margin-bottom: 1%;
   height: 90%;
   order: -2;
@@ -37,6 +42,7 @@ body {
   border-radius: 5px;
   opacity: 0;
   transition: ease-in-out 1s;
+  background-position: center center;
 }
 
 .slide1 {
@@ -88,26 +94,29 @@ body {
   display: none;
 }
 
+.text-wrapper {
+  display: flex;
+}
+
 .slide-text {
-  display: block;
   height: 7%;
   text-align: center;
   color: beige;
   font-size: 0;
   opacity: 0;
-  order: -1;
-  transition: ease-in-out 1s;
+  transition: ease-in-out 1s, order ease-in-out 2s;
 }
 
-#slide1:checked ~ .text1,
-#slide2:checked ~ .text2,
-#slide3:checked ~ .text3,
-#slide4:checked ~ .text4,
-#slide5:checked ~ .text5,
-#slide6:checked ~ .text6,
-#slide7:checked ~ .text7 {
-  font-size: 1.5em;
+#slide1:checked ~ .text-wrapper > .text1,
+#slide2:checked ~ .text-wrapper > .text2,
+#slide3:checked ~ .text-wrapper > .text3,
+#slide4:checked ~ .text-wrapper > .text4,
+#slide5:checked ~ .text-wrapper > .text5,
+#slide6:checked ~ .text-wrapper > .text6,
+#slide7:checked ~ .text-wrapper > .text7 {
+  font-size: inherit;
 	opacity: 1;
+  order: -1
 }
 
 .label-wrapper {
@@ -119,8 +128,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 2vw;
-  width: 2vw;
+  height: 2.5vw;
+  width: 2.5vw;
   margin-top: 3px;
   cursor: pointer;
 }
@@ -131,8 +140,8 @@ body {
 
 .point {
   display: block;
-  width: 1vw;
-  height: 1vw;
+  width: 1.5vw;
+  height: 1.5vw;
   border-radius: 50%;
   border: 2px solid #b0865f;
   transition: ease-in-out 0.3s;
@@ -156,4 +165,60 @@ body {
 #slide6:checked:hover ~ .label-wrapper > .label6 > .point,
 #slide7:checked:hover ~ .label-wrapper > .label7 > .point {
   background: #ffd9b5;
+}
+
+@media (max-width: 768px) {
+
+  body {
+    font-size: 1.2em;
+  }
+
+  .slider {
+    height: 95%;
+  }
+}
+
+@media (max-width: 550px) {
+  body {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 500px) {
+
+  body {
+    font-size: 1.2em;
+  }
+
+  .wrapper {
+    height: 45vw;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /* justify-content: space-between; */
+    padding: 15px;  
+    gap: 10px
+  }
+
+  .text-wrapper {
+    order: 2;
+    margin-right: auto;
+  }
+
+  .label-wrapper {
+    margin: 0 auto;
+  }
+
+  .slider {
+    height: 70%;
+  }
+
+  #slide1:checked ~ .slider > .slide1,
+  #slide2:checked ~ .slider > .slide2,
+  #slide3:checked ~ .slider > .slide3,
+  #slide4:checked ~ .slider > .slide4,
+  #slide5:checked ~ .slider > .slide5,
+  #slide6:checked ~ .slider > .slide6,
+  #slide7:checked ~ .slider > .slide7 {
+    height: 100%;
+  }
 }
