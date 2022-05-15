@@ -194,14 +194,15 @@ body {
     height: 45vw;
     flex-direction: column;
     flex-wrap: nowrap;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     padding: 15px;  
-    gap: 10px
+    /* gap: 10px */
   }
 
   .text-wrapper {
     order: 2;
     margin-right: auto;
+    height: 1.3em;
   }
 
   .label-wrapper {
