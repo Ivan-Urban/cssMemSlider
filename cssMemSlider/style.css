@@ -138,13 +138,18 @@ body {
   border: 2px solid #ffd9b5
 }
 
+.label:active > .point {
+  width: 1.2vw;
+  height: 1.2vw;
+}
+
 .point {
   display: block;
   width: 1.5vw;
   height: 1.5vw;
   border-radius: 50%;
   border: 2px solid #b0865f;
-  transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s, width ease-in-out 0.1s, height ease-in-out 0.1s;
 }
 
 #slide1:checked ~ .label-wrapper > .label1 > .point,
